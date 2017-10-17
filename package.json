@@ -1,0 +1,29 @@
+{
+  "name": "jasmine-custom-reporters",
+  "version": "1.0.0",
+  "description": "Custom reporters for jasmine or protractor frameworks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsirs/jasmine-custom-reporters.git"
+  },
+  "keywords": [
+    "reporters",
+    "Jasmine",
+    "reporters",
+    "protractor",
+    "reporters",
+    "custom",
+    "reporters"
+  ],
+  "author": "rsirs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rsirs/jasmine-custom-reporters/issues"
+  },
+  "homepage": "https://github.com/rsirs/jasmine-custom-reporters#readme",
+  "dependencies": {}
+}
