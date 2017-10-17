@@ -2,7 +2,6 @@
   "name": "jasmine-custom-reporters",
   "version": "1.0.0",
   "description": "Custom reporters for jasmine or protractor frameworks",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
