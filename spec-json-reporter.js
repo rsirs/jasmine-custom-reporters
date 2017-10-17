@@ -22,18 +22,16 @@ class JSONReporter {
     }
 
     logSync(string) {
-        fs.appendFileSync(this.path, string, (err) => {
-            if(err) throw err
-        })
+        fs.appendFileSync(this.path, string);
     }
 
     jasmineStarted(jasmine) {
         this.jasmineTestsStarted = new Date();
-        this.log('//--------------------------------\n'+
-                 '//     Begin of tests Run         \n'+
-                 '//--------------------------------\n');
-        this.log('//Started Executing test cases @ ' + this.jasmineTestsStarted.toLocaleString());
-        this.log('\n//Total specs defined = ' + jasmine.totalSpecsDefined +'\n');
+        this.logSync('//--------------------------------\n'+
+                    '//     Begin of tests Run         \n'+
+                    '//--------------------------------\n');
+        this.logSync('//Started Executing test cases @ ' + this.jasmineTestsStarted.toLocaleString());
+        this.logSync('\n//Total specs defined = ' + jasmine.totalSpecsDefined +'\n');
     }
 
     suiteStarted(suite) {
@@ -52,11 +50,11 @@ class JSONReporter {
     jasmineDone() {
         let totalTime = (new Date() - this.jasmineTestsStarted) / 1000;
         this.logSync(JSON.stringify(this.JSONObj, null, 2)+'\n');
-        this.log('//--------------------------------\n'+
-                 '//     End of tests Run           \n'+
-                 '//--------------------------------\n');
-        this.log('//Finshed Executing test cases @ ' + new Date().toLocaleString());
-        this.log('\n//Tota time taken = ' + totalTime);
+        this.logSync('//--------------------------------\n'+
+                    '//     End of tests Run           \n'+
+                    '//--------------------------------\n');
+        this.logSync('//Finshed Executing test cases @ ' + new Date().toLocaleString());
+        this.logSync('\n//Tota time taken = ' + totalTime);
    
     }
 }
