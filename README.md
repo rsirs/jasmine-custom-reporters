@@ -5,10 +5,12 @@
   To install use `npm i jasmine-custom-reporters`
 
 # Module structure
+```bash
   jasmine-custom-reporters
-    |--spec-console-reporter //Module .js file to report the tests result to console
-    |--spec-json-reporter // Module .js file to report the tests result to console
-    |--package.json //Config .json file for the module
+    ├──spec-console-reporter //Module .js file to report the tests result to console
+    ├──spec-json-reporter // Module .js file to report the tests result to console
+    ├──package.json //Config .json file for the module
+```
 
 # Import
   To import the specific custom reporter use `require(jasmine-custom-reporters/[**])` for example to import ***json reporter*** use `require(jasmine-custom-reporters/spec-console-reporter)` similary remaining reporters
