@@ -7,8 +7,8 @@
 # Module structure
 ```bash
   jasmine-custom-reporters
-    ├──spec-console-reporter //Module .js file to report the tests result to console
-    ├──spec-json-reporter // Module .js file to report the tests result to console
+    ├──spec-console-reporter # Module .js file to report the tests result to console
+    ├──spec-json-reporter # Module .js file to report the tests result to console
     ├──package.json //Config .json file for the module
 ```
 
@@ -22,8 +22,8 @@
 
   ```js
     var consoleReporter = require(`jasmine-custom-reporters/spec-console-reporter`);
-    //jasmine.getEnv().clearReporters() //use this statement to clear default reporters 
-    jasmine.getEnv().addReporter(consoleReporter); // Add this statement to proctractor config file in onPrepare function
+    //jasmine.getEnv().clearReporters() # use this statement to clear default reporters 
+    jasmine.getEnv().addReporter(consoleReporter); //  Add this statement to proctractor config file in onPrepare function
   ```
 
   ## Using Json reporter
@@ -32,7 +32,7 @@
   ```js
     var JSONReporter = require(`jasmine-custom-reporters/spec-json-reporter`);
     var jsonReporter = new JSONReporter('path-to-your-file.json');
-    //jasmine.getEnv().clearReporters() //use this statement to clear default reporters
+    //jasmine.getEnv().clearReporters() // use this statement to clear default reporters
     jasmine.getEnv().addReporter(jsonReporter); // Add this statement to proctractor config file in onPrepare function
   ```
   
