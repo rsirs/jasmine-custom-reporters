@@ -9,7 +9,7 @@
   jasmine-custom-reporters
     ├──spec-console-reporter # Module .js file to report the tests result to console
     ├──spec-json-reporter # Module .js file to report the tests result to console
-    ├──package.json //Config .json file for the module
+    ├──package.json # Config .json file for the module
 ```
 
 # Import
