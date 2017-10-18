@@ -11,12 +11,9 @@
   },
   "keywords": [
     "reporters",
-    "Jasmine",
-    "reporters",
-    "protractor",
-    "reporters",
-    "custom",
-    "reporters"
+    "Jasmine reporters",
+    "protractor reporters",
+    "custom reporters"
   ],
   "author": "rsirs",
   "license": "MIT",
