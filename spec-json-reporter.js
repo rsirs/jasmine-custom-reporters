@@ -9,21 +9,35 @@ class JSONReporter {
         this.openFileSync(this.path);
     }
 
+    /**
+     * @desc Opens the file in write mode (truncate the file if already exitst)
+     * @param { string } path Takes file path as an input
+     */
     openFileSync(path) {
         fs.openSync(path, 'w', (err, fd) => {
             if(err) throw err;            
         });
     }
 
+    /**
+     * @desc  Logs the stirng to file  asynchroniously
+     * @param { string } tagName String that need to be logged to file
+     */
     log(string) {
         fs.appendFile(this.path, string, (err) => {
             if(err) throw err
         })
     }
 
+    /**
+     * @desc  Logs the stirng to file  synchroniously
+     * @param { string } tagName String that need to be logged to file
+     */
     logSync(string) {
         fs.appendFileSync(this.path, string);
     }
+
+    //Jasmine methods starts from here
 
     jasmineStarted(jasmine) {
         this.jasmineTestsStarted = new Date();
