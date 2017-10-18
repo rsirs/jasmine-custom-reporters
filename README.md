@@ -8,7 +8,7 @@
 ```bash
   jasmine-custom-reporters
     ├──spec-console-reporter # Module .js file to report the tests result to console
-    ├──spec-json-reporter # Module .js file to report the tests result to console
+    ├──spec-json-reporter # Module .js file to report the tests result to json file
     ├──package.json # Config .json file for the module
 ```
 
@@ -18,6 +18,7 @@
 # Usage 
   
   ## Using Console reporter
+
   Console reporter is used to report the tests result to the console. 
 
   ```js
@@ -27,6 +28,7 @@
   ```
 
   ## Using Json reporter
+  
   Json reporter is used to report the tests result to json file
 
   ```js
