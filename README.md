@@ -17,7 +17,7 @@
 
 # Usage 
   
-  ## Using Console reporter
+## Using Console reporter
 
   Console reporter is used to report the tests result to the console. 
 
@@ -27,8 +27,8 @@
     jasmine.getEnv().addReporter(consoleReporter); //  Add this statement to proctractor config file in onPrepare function
   ```
 
-  ## Using Json reporter
-  
+## Using Json reporter
+
   Json reporter is used to report the tests result to json file
 
   ```js
