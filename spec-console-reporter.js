@@ -7,6 +7,8 @@ colors = {
     sub_heading: () => '\033[1;30m', // Dark Gray
     highlight: () => '\033[1;33m' //Yellow
 }
+var StatsD = require('node-dogstatsd').StatsD
+var c= new StatsD('172.17.0.1', 8125)
 
 var log = console.log;
 
