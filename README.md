@@ -1,8 +1,7 @@
-# jasmine-custom-reporters
+# jasmine-statsd-reporter
   Jasmine reporters are used to report the results of the test case executed. Jasmine or protractor can be configured so that the result of the tests excution are customized as per our need. More on this in the following sections.
-
-# Installation 
-  To install use `npm i jasmine-custom-reporters`
+  We are utilizing this code to take our spec reports and send them to DataDog for displaying metric and reporting information.
+  This code was forked from https://github.com/rsirs/jasmine-custom-reporters. Thank you rsirs!
 
 # Module structure
 ```bash
@@ -14,7 +13,7 @@
 ```
 
 # Import
-  To import the specific custom reporter use `require(jasmine-custom-reporters/[**])` for example to import ***json reporter*** use `require(jasmine-custom-reporters/spec-console-reporter)` similary remaining reporters
+  To import the specific custom reporter use `require(jasmine-statsd-reporters/[**])` for example to import ***json reporter*** use `require(jasmine-statsd-reporters/spec-console-reporter)` similary remaining reporters
 
 # Usage 
   
@@ -23,7 +22,7 @@
   Console reporter is used to report the tests result to the console. 
 
   ```js
-    var consoleReporter = require(`jasmine-custom-reporters/spec-console-reporter`);
+    var consoleReporter = require(`jasmine-statsd-reporter/spec-console-reporter`);
     //jasmine.getEnv().clearReporters() # use this statement to clear default reporters 
     jasmine.getEnv().addReporter(consoleReporter); //  Add this statement to proctractor config file in onPrepare function
   ```
@@ -61,7 +60,7 @@
   Json reporter is used to report the tests result to json file
 
   ```js
-    var JSONReporter = require(`jasmine-custom-reporters/spec-json-reporter`);
+    var JSONReporter = require(`jasmine-statsd-reporter/spec-json-reporter`);
     var jsonReporter = new JSONReporter('path-to-your-file.json');
     //jasmine.getEnv().clearReporters() // use this statement to clear default reporters
     jasmine.getEnv().addReporter(jsonReporter); // Add this statement to proctractor config file in onPrepare function
@@ -149,7 +148,7 @@
   XML reporter is used to report the tests result to XML file
 
   ```js
-    var XMLReporter = require(`jasmine-custom-reporters/spec-XML-reporter`);
+    var XMLReporter = require(`jasmine-statsd-reporter/spec-XML-reporter`);
     var xmlReporter = new JSONReporter('path-to-your-file.xml');
     //jasmine.getEnv().clearReporters() // use this statement to clear default reporters
     jasmine.getEnv().addReporter(xmlReporter); // Add this statement to proctractor config file in onPrepare function

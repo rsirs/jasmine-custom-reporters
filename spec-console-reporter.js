@@ -7,6 +7,8 @@ colors = {
     sub_heading: () => '\033[1;30m', // Dark Gray
     highlight: () => '\033[1;33m' //Yellow
 }
+var StatsD = require('node-dogstatsd').StatsD
+var c= new StatsD('172.17.0.1', 8125)
 
 var log = console.log;
 
@@ -45,13 +47,17 @@ var consoleReporter = {
         if(!spec.failedExpectations.length){
             log(colors.pass() +
                 '\t' + spec.description.trim() + '\t' + 
-                lapsedTime + 's'
+                lapsedTime + 's',
+                c.increment('watchdog.se.' + spec.description, { status: 'passed'}),
+                c.histogram('watchdog.se ' + spec.description, { status: 'passed'})
             );
         }         
         else {
             log(colors.fail() +
                 '\t' + spec.description.trim() + '\t' + 
-                lapsedTime + 's'
+                lapsedTime + 's',
+                c.increment('watchdog.se. ' + spec.description, { status: 'failed'}),
+                c.histogram('watchdog.se ' + spec.description, { status: 'failed'})
             );
             spec.failedExpectations.forEach((expectation) => {
                 log('\tFailed spec reasons' +
