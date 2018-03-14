@@ -1,14 +1,35 @@
 {
-  "name": "jasmine-statsd-reporter",
-  "version": "0.1.0",
-  "description": "Custom reporters for jasmine or protractor frameworks",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+  "_from": "git+ssh://git@github.com/GetTerminus/jasmine-statsd-reporter.git#master",
+  "_id": "jasmine-statsd-reporter@0.1.0",
+  "_inBundle": false,
+  "_location": "/jasmine-statsd-reporter",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "git+https://github.com/GetTerminus/jasmine-statsd-reporter.git"
+    "raw": "git+ssh://git@github.com/GetTerminus/jasmine-statsd-reporter.git#master",
+    "rawSpec": "git+ssh://git@github.com/GetTerminus/jasmine-statsd-reporter.git#master",
+    "saveSpec": "git+ssh://git@github.com/GetTerminus/jasmine-statsd-reporter.git#master",
+    "fetchSpec": "ssh://git@github.com/GetTerminus/jasmine-statsd-reporter.git",
+    "gitCommittish": "master"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+ssh://git@github.com/GetTerminus/jasmine-statsd-reporter.git#ecf8b057c5e7e8bcf22dbb068e5af0c9bfedd47e",
+  "_spec": "git+ssh://git@github.com/GetTerminus/jasmine-statsd-reporter.git#master",
+  "_where": "/Users/jhutchinson/gocode/src/github.com/jhutchinson85/watchdog/se",
+  "author": {
+    "name": "TerminusInc"
+  },
+  "bugs": {
+    "url": "https://github.com/GetTerminus/jasmine-statsd-reporter/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Custom reporters for jasmine or protractor frameworks",
+  "homepage": "https://github.com/GetTerminus/jasmine-statsd-reporter#readme",
   "keywords": [
     "reporters",
     "Jasmine reporters",
@@ -17,11 +38,14 @@
     "statsd reporter",
     "dogstatsd"
   ],
-  "author": "TerminusInc",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GetTerminus/jasmine-statsd-reporter/issues"
+  "name": "jasmine-statsd-reporter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GetTerminus/jasmine-statsd-reporter.git"
   },
-  "homepage": "https://github.com/GetTerminus/jasmine-statsd-reporter#readme",
-  "dependencies": {}
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.0"
 }

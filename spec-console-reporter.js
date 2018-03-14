@@ -47,13 +47,17 @@ var consoleReporter = {
         if(!spec.failedExpectations.length){
             log(colors.pass() +
                 '\t' + spec.description.trim() + '\t' + 
-                lapsedTime + 's'
+                lapsedTime + 's',
+                c.increment('watchdog.se.' + spec.description, { status: 'passed'}),
+                c.histogram('watchdog.se ' + spec.description, { status: 'passed'})
             );
         }         
         else {
             log(colors.fail() +
                 '\t' + spec.description.trim() + '\t' + 
-                lapsedTime + 's'
+                lapsedTime + 's',
+                c.increment('watchdog.se. ' + spec.description, { status: 'failed'}),
+                c.histogram('watchdog.se ' + spec.description, { status: 'failed'})
             );
             spec.failedExpectations.forEach((expectation) => {
                 log('\tFailed spec reasons' +
