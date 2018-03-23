@@ -30,10 +30,10 @@ var consoleReporter = {
 
         if(!spec.failedExpectations.length){
             log(colors.pass() + spec.fullName.trim());
-            wdog.increment(consoleReporter.statsDServiceName.trim() + spec.description.trim(), { status: 'passed'});
+            wdog.increment(consoleReporter.statsDServiceName.trim() + spec.description.trim(), ['status: passed']);
         } else {
             log(colors.fail() + spec.fullName.trim());
-            wdog.increment(consoleReporter.statsDServiceName.trim() + spec.description.trim(), { status: 'failed'});
+            wdog.increment(consoleReporter.statsDServiceName.trim() + spec.description.trim(), ['status: failed']);
             spec.failedExpectations.forEach((expectation) => {
                 log('\tFailed spec reasons' +
                      '\n\t\tReason: ' + expectation.message + 
